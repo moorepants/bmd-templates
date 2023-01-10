@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Class file for the abstract of the Bicycle and Motercycle Dynamics 
-%% Symposium 2019, 9-11 September, University of Padova, Italy
+%% Class file for the abstract of the Bicycle and Motercycle Dynamics
+%% Conference 2023, 18-20 September, Delft University of Technology.
+%% Jason K. Moore 2023 revision
 %% Ben Smith 10092015 REV 2018 by UNIPD team
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -33,14 +34,13 @@
 \RequirePackage{tabularx}
 \RequirePackage{times}
 \RequirePackage{verbatim}
+\RequirePackage{fancyhdr}
 
 \setpapersize{A4}  % needs vmargin package
 %\setmarginsrb{left}{top}{right}{bottom}{headh1gt}{headsep}{foothgt}{footskip}
-%\setmarginsrb{30mm}{10mm}{30mm}{10mm}{15mm}{10mm}{0mm}{0mm}
-\setmarginsrb{30mm}{10mm}{30mm}{27mm}{15mm}{5mm}{10mm}{10mm}
+\setmarginsrb{12.7mm}{25mm}{12.7mm}{19mm}{18mm}{4mm}{6mm}{10mm}
 % headsep:  Distance from bottom of header to the body of text on a page.
 % footskip: Distance from bottom of body to the bottom of the footer (the footer is the text at the bottom of each page).
-
 
 \parindent=0pt
 %\parskip0pc
@@ -128,7 +128,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\ps@plain}{%
-  \renewcommand{\@oddhead}{{\parbox[b]{80ex}{
+  \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
       The Evolving Scholar (\printyear)
     \end{minipage}
@@ -151,26 +151,30 @@
       Symposium on the Dynamics and Control of Single Track Vehicles\\%
       18--20 October 2023, Delft University of Technology, The Netherlands}
     \end{minipage}
-    \vspace{5mm}}}}%
-  \renewcommand{\@evenhead}{{\hfill\parbox[b]{80ex}{
+    \vspace{5mm}
+  }}}%
+  \renewcommand{\@evenhead}{{\hfill\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
-      The Evolving Scholar (\printyear)
+      Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize%
       \raggedleft http://dx.doi.org/\printdoi
     \end{minipage}
     \vspace{5mm}}}}%
-  \renewcommand{\@oddfoot}{
+  \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
     \scriptsize%
-    \copyright \printyear \hspace{1mm} \printauthors published by TU Delft OPEN on behalf of the authors.\\
+    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+    on behalf of the authors.\\%
     ISSN: \printissn
-  }%
-  \renewcommand{\@evenfoot}{
+}}}%
+  \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
     \scriptsize%
-    \copyright \printyear \hspace{1mm} \printauthors published by TU Delft OPEN on behalf of the authors.\\
+    \raggedright
+    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+    on behalf of the authors.\\%
     ISSN: \printissn
-  }%
+}}}%
 }
 \renewcommand{\baselinestretch}{0.91}
 
@@ -183,8 +187,8 @@
         ]%
 }
 
-\AtBeginDocument{%    
+\AtBeginDocument{%
   \pagestyle{plain}
-}  
-  
+}
+
 \endinput
