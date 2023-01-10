@@ -31,9 +31,10 @@
 \RequirePackage{graphicx}
 \RequirePackage{latexsym}
 \RequirePackage{natbib}
+\RequirePackage{siunitx}
 \RequirePackage{tabularx}
-\RequirePackage{times}
 \RequirePackage{tikz}
+\RequirePackage{times}
 \RequirePackage{verbatim}
 
 \setpapersize{A4}  % needs vmargin package
