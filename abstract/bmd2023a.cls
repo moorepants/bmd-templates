@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bmd2019a}[2018/08/09 BMD2019 abstract class]
+\ProvidesClass{bmd2023a}[2023/01/10 BMD2023 abstract class]
 \ProcessOptions\relax
 
 \DeclareOption{11pt}{\OptionNotUsed}
