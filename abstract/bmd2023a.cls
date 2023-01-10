@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Class file for the abstract of the Bicycle and Motercycle Dynamics
 %% Conference 2023, 18-20 September, Delft University of Technology.
-%% Jason K. Moore 2023 revision
+%% Jason K. Moore 20230110 revision
 %% Ben Smith 10092015 REV 2018 by UNIPD team
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -33,8 +33,8 @@
 \RequirePackage{natbib}
 \RequirePackage{tabularx}
 \RequirePackage{times}
+\RequirePackage{tikz}
 \RequirePackage{verbatim}
-\RequirePackage{fancyhdr}
 
 \setpapersize{A4}  % needs vmargin package
 %\setmarginsrb{left}{top}{right}{bottom}{headh1gt}{headsep}{foothgt}{footskip}
@@ -87,7 +87,7 @@
          \begin{list}{}{\leftmargin\t@bindwidth
              \rightmargin\t@bindwidth}
              {\item \footnotesize  #2}
-         \end{list}  
+         \end{list}
      \else                               % ELSE  center.
          \hbox to\hsize{\hfil{\sc #1}\hfil}
          \hbox to\hsize{\hfil{\footnotesize #2}\hfil}
@@ -110,7 +110,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SECTIONS 
+%% SECTIONS
 \renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

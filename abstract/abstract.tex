@@ -1,5 +1,6 @@
 \documentclass{bmd2023a}
-\usepackage{lipsum}
+
+\pagenumbering{roman}
 
 \begin{document}
 
@@ -11,9 +12,11 @@
 \accepteddate{dd/mm/yyyy}
 \publisheddate{dd/mm/yyyy}
 \citation{}
-\authors{One, A. B., Two, A. C., \& Three, A. D.}
 \issn{2667-2812}
 % End publisher variables.
+
+% List authors with only initials for given names, displays in footer.
+\authors{One, A. B., Two, A. C., \& Three, A. D.}
 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{1.0pt}}
 
@@ -73,7 +76,7 @@ compatiblity with the Orvium.
 
 The abstract must be written in English. It must contain the names,
 affiliations, and e-mail addresses of the authors. Do not edit the headers or
-footers or the list of publisher variables.  The paper size is European A4 (21
+footers or the list of publisher variables. The paper size is European A4 (21
 x 29.7 cm).The left and right margins are 1.27~cm, the top margin (not
 including the header) is 2.5~cm, and the bottom margin is 1.9~cm. The title
 should be in Times New Roman 18pt, and may extend over more than one line. The
@@ -81,8 +84,8 @@ author's name or authors' names should be in Times New Roman 10pt, and the
 affiliation should be in 8pt.
 
 The abstract itself has the section heading \textbf{Abstract:}, bold 9~pt Times
-New Roman, and the text should be written in Times New Roman, 10~pt. All these
-fonts are already set and should not be edited.
+New Roman, and the primary text should be written in Times New Roman, 10~pt.
+All these fonts are already set and should not be edited.
 
 Equations should be numbered continuously according to the format shown in
 Equation~(\ref{eq:equ1}):
@@ -91,13 +94,7 @@ Equation~(\ref{eq:equ1}):
 \end{equation}
 where the unknown symbols are explained after the equation.
 
-Figures, graphs, and tables must be included using the same style as in
-Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
-be centred on the page. Use of at least 300 ppi resolution for pictures and 600
-dpi for line art is required, 1 px wide lines in figures should be avoided as
-they may become invisible in print.
-
-\begin{table}[]
+\begin{table}[h!]
   \begin{center}
     \caption{Example of a table with a short caption.} \label{tab:tab1}
     \begin{tabular}{|c|ccc|}
@@ -112,6 +109,12 @@ they may become invisible in print.
   \end{center}
 \end{table}
 
+Figures, graphs, and tables must be included using the same style as in
+Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
+be centred on the page. Use of at least 300 ppi resolution for pictures and 600
+dpi for line art is required, 1 px wide lines in figures should be avoided as
+they may become invisible in print.
+
 \begin{figure}[]
   \begin{center}
     \includegraphics[width=55mm]{figure1}
@@ -125,17 +128,14 @@ Bibliographical citations should be written in alphabetical order in the
 \textbf{References} section at the end of the document and use the APA citation
 system and the APA format. See the \textbf{References} section below, where
 \citep{Pac02} exemplifies the case of a textbook, \citep{Ber07} is an article
-in a conference proceedings, and \citep{Sha71} is an article in a journal.
-
-Make use of the \verb|natbib| package with \verb|\citep{}| or \verb|\citet{}|
-for citations. If using a \verb|.bib| file, use the \verb|apacite| bibliography
+in a conference proceedings, and \citep{Sha71} is an article in a journal. Make
+use of the \verb|natbib| package with \verb|\citep{}| or \verb|\citet{}| for
+citations. If using a \verb|.bib| file, use the \verb|apacite| bibliography
 style to get APA formatting.
 
 We very much look forward to welcoming you in Delft! Best wishes and the
 warmest regards from the Organizing Committee of Bicycle and Motorcycle
 Dynamics 2023.
-
-\lipsum[2-4]
 
 % Use the apacite style with a bib file, e.g. references.bib.
 %\bibliographystyle{apacite}
