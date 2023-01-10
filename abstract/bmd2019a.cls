@@ -5,41 +5,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bmd2019a}[2018/08/09 BMD2019 abstract class]  
+\ProvidesClass{bmd2019a}[2018/08/09 BMD2019 abstract class]
 \ProcessOptions\relax
 
-\DeclareOption{10pt}{\OptionNotUsed}  
-\DeclareOption{12pt}{\OptionNotUsed}  
-\DeclareOption{twocolumn}{\OptionNotUsed}  
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}  
-  
-\ProcessOptions\relax  
-  
-\LoadClass[11pt,a4paper,twoside]{article}  
-  
+\DeclareOption{11pt}{\OptionNotUsed}
+\DeclareOption{12pt}{\OptionNotUsed}
+\DeclareOption{twocolumn}{\OptionNotUsed}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+
+\ProcessOptions\relax
+
+\LoadClass[10pt,a4paper,twoside]{article}
+
 %\RequirePackage[latin1]{inputenc}   % for unix users
 \RequirePackage[ansinew]{inputenc}  %  for windows users
 %\RequirePackage[aplemac]{inputenc}  % for mac users
 
-\RequirePackage[T1]{fontenc}
-\RequirePackage{times}
-\RequirePackage{graphicx}
-\RequirePackage{verbatim}
-\RequirePackage{hyperref}
-\RequirePackage{tabularx}
-\RequirePackage{amsmath,amsfonts,amssymb,amsthm,amsbsy,amsmath}
-\RequirePackage{latexsym}
-\RequirePackage{bm}
 \RequirePackage{a4}
-% \RequirePackage{fancyhdr}
+\RequirePackage{amsmath,amsfonts,amssymb,amsthm,amsbsy,amsmath}
+\RequirePackage{bm}
 \RequirePackage{engord}
 \RequirePackage{epsfig,vmargin,booktabs}
-
+\RequirePackage[T1]{fontenc}
+\RequirePackage{graphicx}
+\RequirePackage{latexsym}
+\RequirePackage{natbib}
+\RequirePackage{tabularx}
+\RequirePackage{times}
+\RequirePackage{verbatim}
 
 \setpapersize{A4}  % needs vmargin package
 %\setmarginsrb{left}{top}{right}{bottom}{headh1gt}{headsep}{foothgt}{footskip}
 %\setmarginsrb{30mm}{10mm}{30mm}{10mm}{15mm}{10mm}{0mm}{0mm}
-\setmarginsrb{30mm}{10mm}{30mm}{27mm}{15mm}{5mm}{0mm}{0mm}
+\setmarginsrb{30mm}{10mm}{30mm}{27mm}{15mm}{5mm}{10mm}{10mm}
 % headsep:  Distance from bottom of header to the body of text on a page.
 % footskip: Distance from bottom of body to the bottom of the footer (the footer is the text at the bottom of each page).
 
@@ -48,6 +46,16 @@
 %\parskip0pc
 \parskip=2ex
 
+% variable definitions
+\def\doi#1{\def\@doi{#1}}\newcommand{\printdoi}{\@doi}
+\def\year#1{\def\@year{#1}}\newcommand{\printyear}{\@year}
+\def\editor#1{\def\@editor{#1}}\newcommand{\printeditor}{\@editor}
+\def\submitteddate#1{\def\@submitteddate{#1}}\newcommand{\printsubmitteddate}{\@submitteddate}
+\def\accepteddate#1{\def\@accepteddate{#1}}\newcommand{\printaccepteddate}{\@accepteddate}
+\def\publisheddate#1{\def\@publisheddate{#1}}\newcommand{\printpublisheddate}{\@publisheddate}
+\def\citation#1{\def\@citation{#1}}\newcommand{\printcitation}{\@citation}
+\def\authors#1{\def\@authors{#1}}\newcommand{\printauthors}{\@authors}
+\def\issn#1{\def\@issn{#1}}\newcommand{\printissn}{\@issn}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The LABEL extensions for proofing. J. Kaipio, 4.4.1995
@@ -120,18 +128,60 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\ps@plain}{%
-  \renewcommand{\@oddhead}{{\parbox[b]{60ex}{\scriptsize%
-    Bicycle and Motorcycle Dynamics 2019\\%
-    Symposium on the Dynamics and Control of Single Track Vehicles,\\%
-    9--11 September 2019, University of Padova, Italy \vspace{5mm}}}}%
-  \renewcommand{\@evenhead}{{\hfill\parbox[b]{60ex}{\scriptsize%
-    \raggedleft Bicycle and Motorcycle Dynamics 2019\\%
-    Symposium on the Dynamics and Control of Single Track Vehicles,\\%
-    9--11 September 2019, University of Padova, Italy \vspace{5mm}}}}%
-  \renewcommand{\@oddfoot}{}%
-  \renewcommand{\@evenfoot}{}%
+  \renewcommand{\@oddhead}{{\parbox[b]{80ex}{
+    \begin{minipage}{0.5\textwidth}
+      The Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize%
+      \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{1mm}
+    \\
+    % logos are 1cm in height @ 300 ppi
+    \begin{minipage}{0.2\textwidth}
+      \includegraphics[height=1cm]{bmd2023-logo-256x118.png}
+    \end{minipage}
+    \begin{minipage}{0.2\textwidth}
+      \includegraphics[height=1cm]{tu-delft-open-logo-294x118.png}
+    \end{minipage}
+    \begin{minipage}{0.6\textwidth}
+      \scriptsize%
+      \raggedleft \textbf{Bicycle and Motorcycle Dynamics 2023\\%
+      Symposium on the Dynamics and Control of Single Track Vehicles\\%
+      18--20 October 2023, Delft University of Technology, The Netherlands}
+    \end{minipage}
+    \vspace{5mm}}}}%
+  \renewcommand{\@evenhead}{{\hfill\parbox[b]{80ex}{
+    \begin{minipage}{0.5\textwidth}
+      The Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize%
+      \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{5mm}}}}%
+  \renewcommand{\@oddfoot}{
+    \scriptsize%
+    \copyright \printyear \hspace{1mm} \printauthors published by TU Delft OPEN on behalf of the authors.\\
+    ISSN: \printissn
+  }%
+  \renewcommand{\@evenfoot}{
+    \scriptsize%
+    \copyright \printyear \hspace{1mm} \printauthors published by TU Delft OPEN on behalf of the authors.\\
+    ISSN: \printissn
+  }%
 }
 \renewcommand{\baselinestretch}{0.91}
+
+\renewcommand{\maketitle}{%
+    \twocolumn[%
+        \fontsize{50}{60}\fontfamily{phv}\fontseries{b}%
+        \fontshape{sl}\selectfont\headlinecolor
+        \@title
+        \medskip
+        ]%
+}
 
 \AtBeginDocument{%    
   \pagestyle{plain}
