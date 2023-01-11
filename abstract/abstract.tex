@@ -7,12 +7,12 @@
 %% Titlepage variables
 
 % Title
-\title{Instructions for Preparing an Extended Abstract for Bicycle and 
-	Motorcycle Dynamics 2023}
+\title{Instructions for Preparing an Extended Abstract for Bicycle and
+  Motorcycle Dynamics 2023}
 
-% List authors for the title. Call \addauthor{name}{affiliationID} for every 
-% author. Authors will appear in the order off calls to \addauthor. Please 
-% manually specify the correct affiliation ID and an asterisk to the 
+% List authors for the title. Call \addauthor{name}{affiliationID} for every
+% author. Authors will appear in the order off calls to \addauthor. Please
+% manually specify the correct affiliation ID and an asterisk to the
 % corresponding author
 \addauthor{Author B. One}{1}
 \addauthor{Author C. Two}{2}
@@ -21,16 +21,15 @@
 % List authors with only initials for given names, displays only in footer.
 \authorfooter{One, A. B., Two, A. C., \& Three, A. D.}
 
-% List affiliations. Call /addaffiliation{id}{name}{EmailOrcidString} once for
-% every distinct institution, where id specifies the affiliation ID (ensure 
-% that this corresponds to the IDs used with \addauthor), name specifies the 
-% affiliation name, and EmailOrcidString is a string listing emails and 
-% ORCIDs (optional) affiliated with this affiliation separating mail and 
-% ORCID using a comma and different author credentials using a semicolon.
+% List affiliations. Call \addaffiliation{id}{name}{EmailOrcidString} once for
+% every distinct institution, where id specifies the affiliation ID (ensure
+% that this corresponds to the IDs used with \addauthor), name specifies the
+% affiliation name, and EmailOrcidString is a string listing emails and ORCIDs
+% (optional) affiliated with this affiliation separating mail and ORCID using a
+% comma and different author credentials using a semicolon.
 
-\addaffiliation{1}{Department of Engineering, University of Technology, Netherlands}{a.b.one@uot.nl, ORCID 1111-1111-1111-1111}
-\addaffiliation{2}{Department of Engineering, University of Technology, Netherlands}{a.c.two@uot.nl, ORCID 2222-2222-2222-2222; 
-	a.d.three@uot.nl, ORCID 3333-3333-3333-3333}
+\addaffiliation{1}{Department of Engineering, University of Technology, The Netherlands}{a.b.one@uot.nl, ORCID 1111-1111-1111-1111}
+\addaffiliation{2}{Department of Engineering, University of Technology, Germany}{a.c.two@uot.de, ORCID 2222-2222-2222-2222; a.d.three@uot.de, ORCID 3333-3333-3333-3333}
 
 % The following variables will be updated by the publisher, do not edit.
 \doi{XX.XXXX/XX.XXXX}
@@ -55,20 +54,20 @@ minimum set of source files needed to build a PDF. The ZIP file should be named
 using the following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The
 primary LaTeX file should be named \verb|abstract.tex|. Avoid using LaTeX
 packages other than those listed in the \verb|bmd2023a.cls| file for
-compatibility with the Orvium.
+compatibility with Orvium.
 
 The abstract must be written in English. It must contain the names,
 affiliations, and e-mail addresses of the authors. Do not edit the headers or
 footers or the list of publisher variables. The paper size is European A4 (21
-x 29.7 cm).The left and right margins are 1.27~cm, the top margin (not
+x 29.7 cm). The left and right margins are 1.27~cm, the top margin (not
 including the header) is 2.5~cm, and the bottom margin is 1.9~cm. The title
 should be in Times New Roman 18pt, and may extend over more than one line. The
-author's name or authors' names should be in Times New Roman 10pt, and the
+author's name or authors' names should be in Times New Roman 10pt and the
 affiliation should be in 8pt.
 
-The abstract itself has the section heading \textbf{Abstract:}, bold 9~pt Times
-New Roman, and the primary text should be written in Times New Roman, 10~pt.
-All these fonts are already set and should not be edited.
+The abstract itself has the section heading \textbf{Abstract:}, bold 11~pt
+Times New Roman, and the primary text should be written in Times New Roman,
+10~pt. All these fonts are already set and should not be edited.
 
 Equations should be numbered continuously according to the format shown in
 Equation~(\ref{eq:equ1}):
@@ -77,7 +76,7 @@ Equation~(\ref{eq:equ1}):
 \end{equation}
 where the unknown symbols are explained after the equation.
 
-\begin{table}[h!]
+\begin{table}[]
   \begin{center}
     \caption{Example of a table with a short caption.} \label{tab:tab1}
     \begin{tabular}{|c|ccc|}
@@ -94,7 +93,7 @@ where the unknown symbols are explained after the equation.
 
 Figures, graphs, and tables must be included using the same style as in
 Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
-be centered on the page. Use of at least 300 ppi resolution for pictures and
+be centered on the page. Use of at least 300 dpi resolution for pictures and
 600 dpi for line art is required, 1 px wide lines in figures should be avoided
 as they may become invisible in print.
 

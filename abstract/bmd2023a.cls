@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Class file for the abstract of the Bicycle and Motercycle Dynamics
 %% Conference 2023, 18-20 September, Delft University of Technology.
-%% Jason K. Moore 20230110 revision
+%% Jason K. Moore & Chrisopth Schmidt 20230110 revision
 %% Ben Smith 10092015 REV 2018 by UNIPD team
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -118,7 +118,7 @@
 %% CMS, 10.01.2023
 
 %% Authorlist
-%% Print comma-separated authorlist after calling 
+%% Print comma-separated authorlist after calling
 %% /addauthor{authorname}{affiliationID} multiple times
 %% Adapted from: https://tex.stackexchange.com/a/231056 (11.01.2023)
 \newcommand{\printlist}[2][,]{{% Print list
@@ -130,8 +130,8 @@
 	\listadd{\authorlist}{#1~\textsuperscript{#2}}}
 
 %% Affiliationlist
-%% Print affiliations as a vertical list after calling 
-%% /addaffiliation{affiliationID}{affilationName}{EmailOrchidString} 
+%% Print affiliations as a vertical list after calling
+%% /addaffiliation{affiliationID}{affilationName}{EmailOrchidString}
 %% multiple times
 %% Adapted from: https://tex.stackexchange.com/a/47352 (11.01.2023)
 \newcommand{\affiliationlist}{}
@@ -144,50 +144,50 @@
 
 %% Overwrite maketitle
 \renewcommand{\@maketitle}{%
-	
-	\noindent\makebox[\linewidth]{\rule{\textwidth}{1.0pt}}
-	
-	\begin{flushleft}
-		{\fontsize{9pt}{11pt}\selectfont%
-			% Do not edit.
-			Type of the Paper: Extended Abstract
-		}
-	\end{flushleft}
-	
-	\begin{flushleft}
-		{\fontsize{18pt}{20pt}\selectfont%
-			% Replace with your paper title.
-			\@title
-		}
-	\end{flushleft}
-	
-	\begin{flushleft}
-		{\fontsize{10}{12}\selectfont{
-				% Replace with your authors.
-				\printlist{\authorlist}
-			}\\}
-		\vspace{10pt}
-		{\fontsize{8pt}{10pt}\selectfont{
-				% Replace with your affiliations.
-				%\textsuperscript{1} Affiliation 1; email One; ORCID One (if applicable) \\
-				%\textsuperscript{2} Affiliation 2; email Two, ORCID Two (if applicable);
-				%email Three, ORCID Three (if applicable) \\
-				\affiliationlist
-				\textsuperscript{*} corresponding author
-		}}
-	\end{flushleft}
-	
-	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
-	
-	\begin{flushleft}
-		{\fontsize{8pt}{10pt}\selectfont{
-				Name of Editor: \printeditor \\
-				Submitted: \printsubmitteddate \\
-				Accepted: \printaccepteddate \\
-				Published: \printpublisheddate \\
-				Citation: \printcitation
-		}}
-	\end{flushleft}
+
+  \noindent\makebox[\linewidth]{\rule{\textwidth}{1.0pt}}
+
+  \begin{flushleft}
+    {\fontsize{9pt}{11pt}\selectfont%
+      % Do not edit.
+      Type of the Paper: Extended Abstract
+    }
+  \end{flushleft}
+
+  \begin{flushleft}
+    {\fontsize{18pt}{20pt}\selectfont%
+      % Replace with your paper title.
+      \@title
+    }
+  \end{flushleft}
+
+  \begin{flushleft}
+    {\fontsize{10}{12}\selectfont{
+        % Replace with your authors.
+        \printlist{\authorlist}
+      }\\}
+    \vspace{10pt}
+    {\fontsize{8pt}{10pt}\selectfont{
+        % Replace with your affiliations.
+        %\textsuperscript{1} Affiliation 1; email One; ORCID One (if applicable) \\
+        %\textsuperscript{2} Affiliation 2; email Two, ORCID Two (if applicable);
+        %email Three, ORCID Three (if applicable) \\
+        \affiliationlist
+        \textsuperscript{*} corresponding author
+    }}
+  \end{flushleft}
+
+  \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+  \begin{flushleft}
+    {\fontsize{8pt}{10pt}\selectfont{
+        Name of Editor: \printeditor \\
+        Submitted: \printsubmitteddate \\
+        Accepted: \printaccepteddate \\
+        Published: \printpublisheddate \\
+        Citation: \printcitation
+    }}
+  \end{flushleft}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
