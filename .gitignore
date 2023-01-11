@@ -1,0 +1,5 @@
+*.aux
+*.txt
+*.synctex.gz
+*.log
+abstract.pdf

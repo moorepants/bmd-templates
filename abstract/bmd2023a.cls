@@ -55,7 +55,7 @@
 \def\accepteddate#1{\def\@accepteddate{#1}}\newcommand{\printaccepteddate}{\@accepteddate}
 \def\publisheddate#1{\def\@publisheddate{#1}}\newcommand{\printpublisheddate}{\@publisheddate}
 \def\citation#1{\def\@citation{#1}}\newcommand{\printcitation}{\@citation}
-\def\authors#1{\def\@authors{#1}}\newcommand{\printauthors}{\@authors}
+\def\authorfooter#1{\def\@authors{#1}}\newcommand{\printauthors}{\@authors}
 \def\issn#1{\def\@issn{#1}}\newcommand{\printissn}{\@issn}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,6 +109,86 @@
 %  End of \@makecaption modifications.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MAKETITLE
+%%
+%% Overwriting \maketitle to prevent floats from slipping above a manually
+%% created title
+%%
+%% CMS, 10.01.2023
+
+%% Authorlist
+%% Print comma-separated authorlist after calling 
+%% /addauthor{authorname}{affiliationID} multiple times
+%% Adapted from: https://tex.stackexchange.com/a/231056 (11.01.2023)
+\newcommand{\printlist}[2][,]{{% Print list
+		% http://tex.stackexchange.com/a/89187/5764
+		\def\listsep{\def\listsep{#1}}% Delayed execution of list separator
+		\renewcommand{\do}[1]{\listsep~##1}%
+		\dolistloop\authorlist}}
+\newcommand{\addauthor}[2]{
+	\listadd{\authorlist}{#1~\textsuperscript{#2}}}
+
+%% Affiliationlist
+%% Print affiliations as a vertical list after calling 
+%% /addaffiliation{affiliationID}{affilationName}{EmailOrchidString} 
+%% multiple times
+%% Adapted from: https://tex.stackexchange.com/a/47352 (11.01.2023)
+\newcommand{\affiliationlist}{}
+\newcommand{\addaffiliation}[3]{
+	\makeatletter
+	\expandafter\def\expandafter\affiliationlist\expandafter{\affiliationlist{}
+		\textsuperscript{#1}~#2:~#3\\}
+	\makeatother}
+
+
+%% Overwrite maketitle
+\renewcommand{\@maketitle}{%
+	
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{1.0pt}}
+	
+	\begin{flushleft}
+		{\fontsize{9pt}{11pt}\selectfont%
+			% Do not edit.
+			Type of the Paper: Extended Abstract
+		}
+	\end{flushleft}
+	
+	\begin{flushleft}
+		{\fontsize{18pt}{20pt}\selectfont%
+			% Replace with your paper title.
+			\@title
+		}
+	\end{flushleft}
+	
+	\begin{flushleft}
+		{\fontsize{10}{12}\selectfont{
+				% Replace with your authors.
+				\printlist{\authorlist}
+			}\\}
+		\vspace{10pt}
+		{\fontsize{8pt}{10pt}\selectfont{
+				% Replace with your affiliations.
+				%\textsuperscript{1} Affiliation 1; email One; ORCID One (if applicable) \\
+				%\textsuperscript{2} Affiliation 2; email Two, ORCID Two (if applicable);
+				%email Three, ORCID Three (if applicable) \\
+				\affiliationlist
+				\textsuperscript{*} corresponding author
+		}}
+	\end{flushleft}
+	
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+	
+	\begin{flushleft}
+		{\fontsize{8pt}{10pt}\selectfont{
+				Name of Editor: \printeditor \\
+				Submitted: \printsubmitteddate \\
+				Accepted: \printaccepteddate \\
+				Published: \printpublisheddate \\
+				Citation: \printcitation
+		}}
+	\end{flushleft}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
@@ -178,15 +258,6 @@
 }}}%
 }
 \renewcommand{\baselinestretch}{0.91}
-
-\renewcommand{\maketitle}{%
-    \twocolumn[%
-        \fontsize{50}{60}\fontfamily{phv}\fontseries{b}%
-        \fontshape{sl}\selectfont\headlinecolor
-        \@title
-        \medskip
-        ]%
-}
 
 \AtBeginDocument{%
   \pagestyle{plain}
