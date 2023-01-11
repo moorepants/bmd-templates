@@ -4,6 +4,34 @@
 
 \begin{document}
 
+%% Titlepage variables
+
+% Title
+\title{Instructions for Preparing an Extended Abstract for Bicycle and 
+	Motorcycle Dynamics 2023}
+
+% List authors for the title. Call \addauthor{name}{affiliationID} for every 
+% author. Authors will appear in the order off calls to \addauthor. Please 
+% manually specify the correct affiliation ID and an asterisk to the 
+% corresponding author
+\addauthor{Author B. One}{1}
+\addauthor{Author C. Two}{2}
+\addauthor{Author D. Three}{2,*}
+
+% List authors with only initials for given names, displays only in footer.
+\authorfooter{One, A. B., Two, A. C., \& Three, A. D.}
+
+% List affiliations. Call /addaffiliation{id}{name}{EmailOrchidString} once for
+% every distinct institution, where id specifies the affiliation ID (ensure 
+% that this corresponds to the IDs used with \addauthor), name specifies the 
+% affiliation name, and EmailOrchidString is a string listing emails and 
+% ORCHIDs (optional) affiliated with this affiliation separating mail and 
+% ORCHID using a comma and different author credentials using a semicolon
+
+\addaffiliation{1}{Affiliation 1}{a.b.one@affiliation1.com, ORCHID 1111111}
+\addaffiliation{2}{Affiliation 2}{a.c.two@affiliation2.com, ORCHID 2222222; 
+	a.d.three@affiliation2.com, ORCHID 3333333}
+
 % The following variables will be updated by the publisher, do not edit.
 \doi{XX.XXXX/XX.XXXX}
 \year{2023}
@@ -15,54 +43,9 @@
 \issn{2667-2812}
 % End publisher variables.
 
-% List authors with only initials for given names, displays in footer.
-\authors{One, A. B., Two, A. C., \& Three, A. D.}
+%% End titlepage variables
 
-\noindent\makebox[\linewidth]{\rule{\textwidth}{1.0pt}}
-
-\begin{flushleft}
-  {\fontsize{9pt}{11pt}\selectfont%
-    % Do not edit.
-    Type of the Paper: Extended Abstract
-  }
-\end{flushleft}
-
-\begin{flushleft}
-  {\fontsize{18pt}{20pt}\selectfont%
-    % Replace with your paper title.
-    Instructions for Preparing an Extended Abstract for Bicycle and Motorcycle
-    Dynamics 2023
-  }
-\end{flushleft}
-
-\begin{flushleft}
-  {\fontsize{10}{12}\selectfont{
-    % Replace with your authors.
-    Author~B. One~\textsuperscript{1},
-    Author~C. Two~\textsuperscript{2},
-    Author~D. Three~\textsuperscript{2,*}
-  }\\}
-  \vspace{10pt}
-  {\fontsize{8pt}{10pt}\selectfont{
-    % Replace with your affiliations.
-    \textsuperscript{1} Affiliation 1; email One; ORCID One (if applicable) \\
-    \textsuperscript{2} Affiliation 2; email Two, ORCID Two (if applicable);
-    email Three, ORCID Three (if applicable) \\
-    \textsuperscript{*} corresponding author
-  }}
-\end{flushleft}
-
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
-
-\begin{flushleft}
-  {\fontsize{8pt}{10pt}\selectfont{
-    Name of Editor: \printeditor \\
-    Submitted: \printsubmitteddate \\
-    Accepted: \printaccepteddate \\
-    Published: \printpublisheddate \\
-    Citation: \printcitation
-  }}
-\end{flushleft}
+\maketitle
 
 \section*{Abstract:}
 Authors are requested to upload an extended abstract of two pages (including
