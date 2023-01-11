@@ -138,7 +138,7 @@
 \newcommand{\addaffiliation}[3]{
 	\makeatletter
 	\expandafter\def\expandafter\affiliationlist\expandafter{\affiliationlist{}
-		\textsuperscript{#1}~#2:~#3\\}
+		\textsuperscript{#1}~#2;~#3\\}
 	\makeatother}
 
 
