@@ -8,6 +8,16 @@ from LibreOffice Writer based on the ODT file. This gives three versions:
 tex+cls, odt, and docx. The format is based primarily on the TU Delft OPEN
 style to match their books.
 
+The files that we deliver to the authors can be built with:
+
+```
+make all
+```
+
+See the Makefile for various subcommands. This will generate a docx and a zip
+file with the latex source and its output. All files end up in the `output/`
+directory.
+
 Command to convert the figure pdf to a high resolution png:
 
 ```
