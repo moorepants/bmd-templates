@@ -260,7 +260,7 @@
 \renewcommand{\baselinestretch}{0.91}
 
 \AtBeginDocument{%
-	\pagestyle{plain}
+  \pagestyle{plain}
 }
 
 \endinput
