@@ -9,7 +9,7 @@ docx: makeoutputdir bmd2023a.odt
 	mv bmd2023a.docx output/
 	cp bmd2023a.odt output/
 zip: makeoutputdir
-	zip bmd2023a.zip abstract/*.tex abstract/*.cls abstract/*.png abstract/*.pdf
+	zip bmd2023a.zip abstract/*.tex abstract/*.cls abstract/*.png abstract/*.pdf abstract/*.bib
 	mv bmd2023a.zip output/
 clean:
 	(rm -rf *.fdb_latexmk *.fls *.ps *.log *.dvi *.aux *.*% *.lof *.lop *.lot *.toc *.idx *.ilg *.ind *.bbl *.blg *.cpt *.out)
