@@ -112,17 +112,14 @@ system and the APA format. See the \textbf{References} section below, where
 \citep{Pac02} exemplifies the case of a textbook, \citep{Ber07} is an article
 in a conference proceedings, and \citep{Sha71} is an article in a journal. Make
 use of the \verb|natbib| package with \verb|\citep{}| or \verb|\citet{}| for
-citations. If using a \verb|.bib| file, use the \verb|apacite| bibliography
+citations. If using a \verb|.bib| file, use the \verb|apalike| bibliography
 style to get APA formatting.
 
 We very much look forward to welcoming you in Delft! Best wishes and the
 warmest regards from the Organizing Committee of Bicycle and Motorcycle
 Dynamics 2023.
 
-% Use the apacite style with a bib file, e.g. references.bib.
-%\bibliographystyle{apacite}
-%\bibliography{references}
-
+% The following manual bibliography declaration is supported:
 \begin{thebibliography}{9}
   \bibitem[Pacejka, 2002]{Pac02} Pacejka, H.~B., (2002). \textit{Tyre and
     Vehicle Dynamics}.  Butterworth and Heinemann, Oxford.
@@ -137,5 +134,12 @@ Dynamics 2023.
     \textit{Proceedings of the IMechE, Part C, Journal of Mechanical
     Engineering Science}, \textit{13}, 316--329.
 \end{thebibliography}
+
+% If you instead use a bib file, remove the
+% \begin{thebibliography}...\end{thebibliography} environment above and
+% uncomment the following lines to use the apalike style with a bib file, e.g.
+% references.bib.
+%\bibliographystyle{apalike}
+%\bibliography{references.bib}
 
 \end{document}
