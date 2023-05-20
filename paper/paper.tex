@@ -1,5 +1,7 @@
 \documentclass{bmd2023p}
 
+\usepackage{lipsum}
+
 \pagenumbering{roman}
 
 \begin{document}
@@ -7,8 +9,8 @@
 %% Titlepage variables
 
 % Title
-\title{Instructions for Preparing an Extended Abstract for Bicycle and
-  Motorcycle Dynamics 2023}
+\title{Instructions for Preparing a Paper for Bicycle and Motorcycle Dynamics
+  2023}
 
 % List authors for the title. Call \addauthor{name}{affiliationID} for every
 % author. Authors will appear in the order off calls to \addauthor. Please
@@ -47,27 +49,37 @@
 \maketitle
 
 \section*{Abstract:}
-Authors are requested to upload an extended abstract of two pages (including
-references and figures) to the Orvium web site by the stated date in the call
-for abstracts. For LaTeX documents, upload a single ZIP file that includes the
+\lipsum[1]
+
+\newpage
+\pagestyle{main}
+
+\section*{Introduction}
+Authors are requested to upload a paper of 6 to 12 pages (including references
+and figures) to the Orvium web site by the stated date in the call for
+abstracts. For LaTeX documents, upload a single ZIP file that includes the
 minimum set of source files needed to build a PDF. The ZIP file should be named
 using the following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The
-primary LaTeX file should be named \verb|abstract.tex|. Avoid using LaTeX
-packages other than those listed in the \verb|bmd2023a.cls| file for
-compatibility with Orvium.
+primary LaTeX file should be named \verb|paper.tex|. Avoid using LaTeX packages
+other than those listed in the \verb|bmd2023p.cls| file for compatibility with
+Orvium.
 
-The abstract must be written in English. It must contain the names,
-affiliations, and e-mail addresses of the authors. Do not edit the headers or
-footers or the list of publisher variables. The paper size is European A4 (21
-x 29.7 cm). The left and right margins are 1.27~cm, the top margin (not
-including the header) is 2.5~cm, and the bottom margin is 1.9~cm. The title
-should be in Times New Roman 18pt, and may extend over more than one line. The
-author's name or authors' names should be in Times New Roman 10pt and the
-affiliation should be in 8pt.
+The paper must be written in English. It must contain the names, affiliations,
+and e-mail addresses of the authors. Do not edit the headers or footers or the
+list of publisher variables. The paper size is European A4 (21 x 29.7 cm). The
+left and right margins are 1.27~cm, the top margin (not including the header)
+is 2.5~cm, and the bottom margin is 1.9~cm. The title should be in Times New
+Roman 18pt, and may extend over more than one line. The author's name or
+authors' names should be in Times New Roman 10pt and the affiliation should be
+in 8pt.
 
-The abstract itself has the section heading \textbf{Abstract:}, bold 11~pt
-Times New Roman, and the primary text should be written in Times New Roman,
-10~pt. All these fonts are already set and should not be edited.
+\subsection*{Abstract}
+
+The abstract has the section heading \textbf{Abstract:}, bold 11~pt Times New
+Roman, and the primary text should be written in Times New Roman, 10~pt. All
+these fonts are already set and should not be edited.
+
+\section*{Equations, Figures, and Tables}
 
 Equations should be numbered continuously according to the format shown in
 Equation~(\ref{eq:equ1}):
@@ -75,21 +87,6 @@ Equation~(\ref{eq:equ1}):
   e^{i\pi} + 1 = 0,
 \end{equation}
 where the unknown symbols are explained after the equation.
-
-\begin{table}[]
-  \begin{center}
-    \caption{Example of a table with a short caption.} \label{tab:tab1}
-    \begin{tabular}{|c|ccc|}
-      \hline
-      &  $x$  &  $y$  &  $z$ \\
-      \hline
-      $x'$  &  $\alpha_1$ & $\beta_1$ & $\gamma_1$ \\
-      $y'$  &  $\alpha_2$ & $\beta_2$ & $\gamma_2$ \\
-      $z'$  &  $\alpha_3$ & $\beta_3$ & $\gamma_3$ \\
-      \hline
-    \end{tabular}
-  \end{center}
-\end{table}
 
 Figures, graphs, and tables must be included using the same style as in
 Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
@@ -106,6 +103,23 @@ as they may become invisible in print.
   \end{center}
 \end{figure}
 
+\begin{table}[]
+  \begin{center}
+    \caption{Example of a table with a short caption.} \label{tab:tab1}
+    \begin{tabular}{|c|ccc|}
+      \hline
+      &  $x$  &  $y$  &  $z$ \\
+      \hline
+      $x'$  &  $\alpha_1$ & $\beta_1$ & $\gamma_1$ \\
+      $y'$  &  $\alpha_2$ & $\beta_2$ & $\gamma_2$ \\
+      $z'$  &  $\alpha_3$ & $\beta_3$ & $\gamma_3$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section*{Bibliography}
+
 Bibliographical citations should be written in alphabetical order in the
 \textbf{References} section at the end of the document and use the APA citation
 system and the APA format. See the \textbf{References} section below, where
@@ -115,9 +129,15 @@ use of the \verb|natbib| package with \verb|\citep{}| or \verb|\citet{}| for
 citations. If using a \verb|.bib| file, use the \verb|apalike| bibliography
 style to get APA formatting.
 
+\section*{Conclusion}
+
 We very much look forward to welcoming you in Delft! Best wishes and the
 warmest regards from the Organizing Committee of Bicycle and Motorcycle
 Dynamics 2023.
+
+\section*{Length}
+
+\lipsum[1-40]
 
 % The following manual bibliography declaration is supported:
 \begin{thebibliography}{9}

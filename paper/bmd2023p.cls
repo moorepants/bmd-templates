@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Class file for the abstract of the Bicycle and Motercycle Dynamics
+%% Class file for the paper of the Bicycle and Motercycle Dynamics
 %% Conference 2023, 18-20 September, Delft University of Technology.
-%% Jason K. Moore & Chrisopth Schmidt 20230110 revision
+%% Jason K. Moore & Christoph Schmidt 20230110 revision
 %% Ben Smith 10092015 REV 2018 by UNIPD team
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bmd2023p}[2023/01/10 BMD2023 paper class]
+\ProvidesClass{bmd2023p}[2023/05/20 BMD2023 paper class]
 \ProcessOptions\relax
 
 \DeclareOption{11pt}{\OptionNotUsed}
@@ -18,8 +18,8 @@
 
 \LoadClass[10pt,a4paper,twoside]{article}
 
-%\RequirePackage[latin1]{inputenc}   % for unix users
-\RequirePackage[ansinew]{inputenc}  %  for windows users
+\RequirePackage[latin1]{inputenc}   % for unix users
+%\RequirePackage[ansinew]{inputenc}  %  for windows users
 %\RequirePackage[aplemac]{inputenc}  % for mac users
 
 \RequirePackage{a4}
@@ -150,7 +150,7 @@
   \begin{flushleft}
     {\fontsize{9pt}{11pt}\selectfont%
       % Do not edit.
-      Type of the Paper: Extended Abstract
+      Type of the Paper: Paper
     }
   \end{flushleft}
 
@@ -192,21 +192,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
-\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
+%\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
+%\renewcommand\subsection{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.1ex}{\normalsize\bf}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% My defs....
-% \newcommand{\dd}[1]{\mbox{${\mathrm d}{#1}$}} % d
-% \newcommand{\grad}{\operatorname{grad}}
-% \newcommand{\dev}{\operatorname{dev}}
-% \newcommand{\tr}{\operatorname{tr}}
-% \newcommand{\ov}[1]{\mbox{$\bm{#1}$}}                           % vectors
-% \newcommand{\om}[1]{\mbox{$\bm{#1}$}}                           % matrices
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+% HEADERS & FOOTERS
+%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\ps@plain}{%
   \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
@@ -255,9 +248,32 @@
     \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
     on behalf of the authors.\\%
     ISSN: \printissn
+    \\
+    \raggedleft \thepage
 }}}%
 }
-\renewcommand{\baselinestretch}{0.91}
+%\renewcommand{\baselinestretch}{0.91}
+
+\renewcommand{\ps@main}{%
+  \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
+    \begin{minipage}{0.5\textwidth}
+      The Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize%
+      \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{5mm}
+  }}}%
+  \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
+    \scriptsize%
+    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+    on behalf of the authors.\\%
+    ISSN: \printissn
+    \\
+    \raggedleft \thepage
+  }}}%
+}
 
 \AtBeginDocument{%
   \pagestyle{plain}
