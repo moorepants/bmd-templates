@@ -246,6 +246,8 @@
 }
 % style for remaining pages after the first
 \renewcommand{\ps@main}{
+  % reduce the headh1gt since the images are no longer present in the header
+  \setmarginsrb{12.7mm}{25mm}{12.7mm}{19mm}{8mm}{4mm}{6mm}{10mm}
   %% headers
   \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
