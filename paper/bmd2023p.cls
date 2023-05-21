@@ -29,6 +29,7 @@
 \RequirePackage{epsfig,vmargin,booktabs}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
+\RequirePackage{lastpage}
 \RequirePackage{latexsym}
 \RequirePackage{natbib}
 \RequirePackage{siunitx}
@@ -241,7 +242,7 @@
     on behalf of the authors.\\%
     ISSN: \printissn
     \\
-    \small \raggedleft \thepage
+    \small \raggedleft \thepage\ of \pageref{LastPage}
   }}}
 }
 % style for remaining pages after the first
@@ -275,7 +276,7 @@
     on behalf of the authors.\\%
     ISSN: \printissn
     \\
-    \small \raggedleft \thepage
+    \small \raggedleft \thepage\ of \pageref{LastPage}
   }}}
   \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
     \vspace{10mm}
@@ -284,7 +285,7 @@
     on behalf of the authors.\\%
     ISSN: \printissn
     \\
-    \small \raggedleft \thepage
+    \small \raggedleft \thepage\ of \pageref{LastPage}
   }}}
 }
 
