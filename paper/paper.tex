@@ -47,11 +47,12 @@
 \maketitle
 
 \section*{Abstract:}
-The abstract must fit on the first page and should not include figures, tables,
-or citations. The abstract has the section heading \textbf{Abstract:}, bold
-11~pt Times New Roman, and the primary text should be written in Times New
-Roman, 10~pt. All these fonts are already set and should not be edited.
+The abstract must fit on this title page and should not include figures,
+tables, or citations. The abstract has the section heading \textbf{Abstract:},
+bold 11~pt Times New Roman, and the abstract text should be written in Times
+New Roman, 10~pt. The primary paper contents should start on the second page.
 
+% New page after the abstract.
 \newpage
 \pagestyle{main}
 
@@ -72,7 +73,10 @@ left and right margins are 1.27~cm, the top margin (not including the header)
 is 2.5~cm, and the bottom margin is 1.9~cm. The title should be in Times New
 Roman 18pt, and may extend over more than one line. The author's name or
 authors' names should be in Times New Roman 10pt and the affiliation should be
-in 8pt.
+in 8pt. Section headings are in Times New Roman 11pt and the primary text is in
+Times New Roman 10pt. All of these fonts are already set and should not be
+edited. Only use \verb|\section| and \verb|\subsection| for sectioning the
+paper's contents.
 
 \section*{Equations, Figures, and Tables}
 
@@ -85,11 +89,11 @@ where the unknown symbols are explained after the equation.
 
 Figures, graphs, and tables must be included using the same style as in
 Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
-be centered on the page. Use of at least 300 dpi resolution for pictures and
-600 dpi for line art is required, 1 px wide lines in figures should be avoided
-as they may become invisible in print.
+be centered on the page. Use of at least 300 dpi resolution for images and 600
+dpi for line art is required, 1 px wide lines in figures should be avoided as
+they may become invisible in print.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \includegraphics[width=55mm]{figure1}
     \caption{An example of a figure caption. Use 10~pt Times New Roman. Use the
@@ -98,7 +102,7 @@ as they may become invisible in print.
   \end{center}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
   \begin{center}
     \caption{Example of a table with a short caption.} \label{tab:tab1}
     \begin{tabular}{|c|ccc|}
@@ -112,9 +116,6 @@ as they may become invisible in print.
     \end{tabular}
   \end{center}
 \end{table}
-
-\subsection*{Subsections}
-\lipsum[1]
 
 \section*{Bibliography}
 
@@ -132,10 +133,6 @@ style to get APA formatting.
 We very much look forward to welcoming you in Delft! Best wishes and the
 warmest regards from the Organizing Committee of Bicycle and Motorcycle
 Dynamics 2023.
-
-\section*{Length}
-
-\lipsum[1-40]
 
 % The following manual bibliography declaration is supported:
 \begin{thebibliography}{9}
