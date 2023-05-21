@@ -47,20 +47,23 @@
 \maketitle
 
 \section*{Abstract:}
-\lipsum[1]
+The abstract must fit on the first page and should not include figures, tables,
+or citations. The abstract has the section heading \textbf{Abstract:}, bold
+11~pt Times New Roman, and the primary text should be written in Times New
+Roman, 10~pt. All these fonts are already set and should not be edited.
 
 \newpage
 \pagestyle{main}
 
 \section*{Introduction}
 Authors are requested to upload a paper of 6 to 12 pages (including references
-and figures) to the Orvium web site by the stated date in the call for
-abstracts. For LaTeX documents, upload a single ZIP file that includes the
-minimum set of source files needed to build a PDF. The ZIP file should be named
-using the following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The
-primary LaTeX file should be named \verb|paper.tex|. Avoid using LaTeX packages
-other than those listed in the \verb|bmd2023p.cls| file for compatibility with
-Orvium.
+and figures) to the Orvium web site by the stated date in the call for papers.
+For LaTeX documents, upload a single ZIP file that includes the minimum set of
+source files needed to build a PDF. The ZIP file should be named using the
+following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The primary
+LaTeX file should be named \verb|paper.tex| and should reside in the root of
+the ZIP file directory tree. Avoid using LaTeX packages other than those listed
+in the \verb|bmd2023p.cls| file for compatibility with Orvium.
 
 The paper must be written in English. It must contain the names, affiliations,
 and e-mail addresses of the authors. Do not edit the headers or footers or the
@@ -70,12 +73,6 @@ is 2.5~cm, and the bottom margin is 1.9~cm. The title should be in Times New
 Roman 18pt, and may extend over more than one line. The author's name or
 authors' names should be in Times New Roman 10pt and the affiliation should be
 in 8pt.
-
-\subsection*{Abstract}
-
-The abstract has the section heading \textbf{Abstract:}, bold 11~pt Times New
-Roman, and the primary text should be written in Times New Roman, 10~pt. All
-these fonts are already set and should not be edited.
 
 \section*{Equations, Figures, and Tables}
 
@@ -92,7 +89,7 @@ be centered on the page. Use of at least 300 dpi resolution for pictures and
 600 dpi for line art is required, 1 px wide lines in figures should be avoided
 as they may become invisible in print.
 
-\begin{figure}[]
+\begin{figure}[h]
   \begin{center}
     \includegraphics[width=55mm]{figure1}
     \caption{An example of a figure caption. Use 10~pt Times New Roman. Use the
@@ -101,7 +98,7 @@ as they may become invisible in print.
   \end{center}
 \end{figure}
 
-\begin{table}[]
+\begin{table}[h]
   \begin{center}
     \caption{Example of a table with a short caption.} \label{tab:tab1}
     \begin{tabular}{|c|ccc|}
@@ -115,6 +112,9 @@ as they may become invisible in print.
     \end{tabular}
   \end{center}
 \end{table}
+
+\subsection*{Subsections}
+\lipsum[1]
 
 \section*{Bibliography}
 

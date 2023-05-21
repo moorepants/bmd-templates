@@ -192,8 +192,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
-%\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
-%\renewcommand\subsection{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.1ex}{\normalsize\bf}}
+\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
+\renewcommand\subsection{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\small\bf}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -201,14 +201,16 @@
 % HEADERS & FOOTERS
 %%%%%%%%%%%%%%%%%%%
 
+% style for the first page
 \renewcommand{\ps@plain}{%
   \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
+    % NOTE : if there are blank lines in the code here, it can cause line
+    % breaks in the rendered document. I don't understand why that would occur.
     \begin{minipage}{0.5\textwidth}
       The Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
-      \scriptsize%
-      \raggedleft http://dx.doi.org/\printdoi
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
     \end{minipage}
     \vspace{1mm}
     \\
@@ -220,28 +222,18 @@
       \includegraphics[height=1cm]{tu-delft-open-logo-294x118.png}
     \end{minipage}
     \begin{minipage}{0.6\textwidth}
-      \scriptsize%
-      \raggedleft \textbf{Bicycle and Motorcycle Dynamics 2023\\%
-      Symposium on the Dynamics and Control of Single Track Vehicles\\%
-      18--20 October 2023, Delft University of Technology, The Netherlands}
+      \scriptsize \raggedleft \textbf{Bicycle and Motorcycle Dynamics 2023\\
+        Symposium on the Dynamics and Control of Single Track Vehicles\\
+        18--20 October 2023, Delft University of Technology, The Netherlands}
     \end{minipage}
     \vspace{5mm}
-  }}}%
-  \renewcommand{\@evenhead}{{\hfill\parbox[b]{\textwidth}{
-    \begin{minipage}{0.5\textwidth}
-      Evolving Scholar (\printyear)
-    \end{minipage}
-    \begin{minipage}{0.5\textwidth}
-      \scriptsize%
-      \raggedleft http://dx.doi.org/\printdoi
-    \end{minipage}
-    \vspace{5mm}}}}%
+  }}}
   \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
     \scriptsize%
     \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
     on behalf of the authors.\\%
     ISSN: \printissn
-}}}%
+  }}}
   \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
     \scriptsize%
     \raggedright
@@ -249,33 +241,52 @@
     on behalf of the authors.\\%
     ISSN: \printissn
     \\
-    \raggedleft \thepage
-}}}%
+    \small \raggedleft \thepage
+  }}}
 }
-%\renewcommand{\baselinestretch}{0.91}
-
-\renewcommand{\ps@main}{%
+% style for remaining pages after the first
+\renewcommand{\ps@main}{
+  %% headers
+  \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
+    \begin{minipage}{0.5\textwidth}
+      Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{10mm}
+  }}}
   \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
       The Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
-      \scriptsize%
-      \raggedleft http://dx.doi.org/\printdoi
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
     \end{minipage}
-    \vspace{5mm}
-  }}}%
-  \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
-    \scriptsize%
+    \vspace{10mm}
+  }}}
+  %% footers
+  \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
+    \vspace{10mm}
+    \scriptsize \raggedright
     \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
     on behalf of the authors.\\%
     ISSN: \printissn
     \\
-    \raggedleft \thepage
-  }}}%
+    \small \raggedleft \thepage
+  }}}
+  \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
+    \vspace{10mm}
+    \scriptsize \raggedright
+    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+    on behalf of the authors.\\%
+    ISSN: \printissn
+    \\
+    \small \raggedleft \thepage
+  }}}
 }
 
-\AtBeginDocument{%
+\AtBeginDocument{
   \pagestyle{plain}
 }
 
