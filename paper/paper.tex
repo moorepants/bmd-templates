@@ -54,7 +54,7 @@ New Roman, 10~pt. The primary paper contents should start on the second page.
 
 % New page after the abstract.
 \newpage
-\pagestyle{main}
+\pagestyle{headings}
 
 \section*{Introduction}
 Authors are requested to upload a paper of 6 to 12 pages (including references
@@ -63,8 +63,9 @@ For LaTeX documents, upload a single ZIP file that includes the minimum set of
 source files needed to build a PDF. The ZIP file should be named using the
 following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The primary
 LaTeX file should be named \verb|paper.tex| and should reside in the root of
-the ZIP file directory tree. Avoid using LaTeX packages other than those listed
-in the \verb|bmd2023p.cls| file for compatibility with Orvium.
+the ZIP file directory tree or under the only top level directory, e.g.
+\verb|paper/paper.tex|. Avoid using LaTeX packages other than those listed in
+the \verb|bmd2023p.cls| file for compatibility with Orvium.
 
 The paper must be written in English. It must contain the names, affiliations,
 and e-mail addresses of the authors. Do not edit the headers or footers or the
