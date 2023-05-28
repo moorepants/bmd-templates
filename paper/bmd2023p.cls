@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Class file for the abstract of the Bicycle and Motercycle Dynamics
+%% Class file for the paper of the Bicycle and Motercycle Dynamics
 %% Conference 2023, 18-20 September, Delft University of Technology.
-%% Jason K. Moore & Chrisopth Schmidt 20230110 revision
+%% Jason K. Moore & Christoph Schmidt 20230110 revision
 %% Ben Smith 10092015 REV 2018 by UNIPD team
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bmd2023a}[2023/01/10 BMD2023 abstract class]
+\ProvidesClass{bmd2023p}[2023/05/20 BMD2023 paper class]
 \ProcessOptions\relax
 
 \DeclareOption{11pt}{\OptionNotUsed}
@@ -25,6 +25,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[a4paper]{geometry}  % required to get exact A4 size
 \RequirePackage{graphicx}
+\RequirePackage{lastpage}
 \RequirePackage{latexsym}
 \RequirePackage{natbib}
 \RequirePackage{siunitx}
@@ -145,7 +146,7 @@
   \begin{flushleft}
     {\fontsize{9pt}{11pt}\selectfont%
       % Do not edit.
-      Type of the Paper: Extended Abstract
+      Type of the Paper: Paper
     }
   \end{flushleft}
 
@@ -188,29 +189,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
 \renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\small\bf}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%
+% HEADERS & FOOTERS
+%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% My defs....
-% \newcommand{\dd}[1]{\mbox{${\mathrm d}{#1}$}} % d
-% \newcommand{\grad}{\operatorname{grad}}
-% \newcommand{\dev}{\operatorname{dev}}
-% \newcommand{\tr}{\operatorname{tr}}
-% \newcommand{\ov}[1]{\mbox{$\bm{#1}$}}                           % vectors
-% \newcommand{\om}[1]{\mbox{$\bm{#1}$}}                           % matrices
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% style for the first page
 \renewcommand{\ps@plain}{%
   \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
+    % NOTE : if there are blank lines in the code here, it can cause line
+    % breaks in the rendered document. I don't understand why that would occur.
     \begin{minipage}{0.5\textwidth}
       The Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
-      \scriptsize%
-      \raggedleft http://dx.doi.org/\printdoi
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
     \end{minipage}
     \vspace{1mm}
     \\
@@ -222,39 +218,70 @@
       \includegraphics[height=1cm]{tu-delft-open-logo-294x118.png}
     \end{minipage}
     \begin{minipage}{0.6\textwidth}
-      \scriptsize%
-      \raggedleft \textbf{Bicycle and Motorcycle Dynamics 2023\\%
-      Symposium on the Dynamics and Control of Single Track Vehicles\\%
-      18--20 October 2023, Delft University of Technology, The Netherlands}
+      \scriptsize \raggedleft \textbf{Bicycle and Motorcycle Dynamics 2023\\
+        Symposium on the Dynamics and Control of Single Track Vehicles\\
+        18--20 October 2023, Delft University of Technology, The Netherlands}
     \end{minipage}
     \vspace{5mm}
-  }}}%
-  \renewcommand{\@evenhead}{{\hfill\parbox[b]{\textwidth}{
-    \begin{minipage}{0.5\textwidth}
-      Evolving Scholar (\printyear)
-    \end{minipage}
-    \begin{minipage}{0.5\textwidth}
-      \scriptsize%
-      \raggedleft http://dx.doi.org/\printdoi
-    \end{minipage}
-    \vspace{5mm}}}}%
+  }}}
   \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
     \scriptsize%
     \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
     on behalf of the authors.\\%
     ISSN: \printissn
-}}}%
-  \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
-    \scriptsize%
-    \raggedright
-    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
-    on behalf of the authors.\\%
-    ISSN: \printissn
-}}}%
+  }}}
 }
-\renewcommand{\baselinestretch}{0.91}
+% style for remaining pages after the first
+\renewcommand{\ps@headings}{
+  % reduce the headh1gt since the images are no longer present in the header
+  \setmarginsrb{12.7mm}{25mm}{12.7mm}{19mm}{8mm}{4mm}{6mm}{10mm}
+  %% headers
+  \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
+    \begin{minipage}{0.5\textwidth}
+      Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{10mm}
+  }}}
+  \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
+    \begin{minipage}{0.5\textwidth}
+      The Evolving Scholar (\printyear)
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \scriptsize \raggedleft http://dx.doi.org/\printdoi
+    \end{minipage}
+    \vspace{10mm}
+  }}}
+  %% footers
+  \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
+    \vspace{10mm}
+    \begin{minipage}{0.75\textwidth}
+      \scriptsize \raggedright
+      \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+      on behalf of the authors.\\%
+      ISSN: \printissn
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \scriptsize \raggedleft \thepage\ of \pageref{LastPage}
+    \end{minipage}
+  }}}
+  \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
+    \vspace{10mm}
+    \begin{minipage}{0.75\textwidth}
+      \scriptsize \raggedright
+      \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+      on behalf of the authors.\\%
+      ISSN: \printissn
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \scriptsize \raggedleft \thepage\ of \pageref{LastPage}
+    \end{minipage}
+  }}}
+}
 
-\AtBeginDocument{%
+\AtBeginDocument{
   \pagestyle{plain}
 }
 

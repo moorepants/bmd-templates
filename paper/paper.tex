@@ -1,14 +1,12 @@
-\documentclass{bmd2023a}
-
-\pagenumbering{roman}
+\documentclass{bmd2023p}
 
 \begin{document}
 
 %% Titlepage variables
 
 % Title
-\title{Instructions for Preparing an Extended Abstract for Bicycle and
-  Motorcycle Dynamics 2023}
+\title{Instructions for Preparing a Paper for Bicycle and Motorcycle Dynamics
+  2023}
 
 % List authors for the title. Call \addauthor{name}{affiliationID} for every
 % author. Authors will appear in the order off calls to \addauthor. Please
@@ -47,27 +45,38 @@
 \maketitle
 
 \section*{Abstract:}
-Authors are requested to upload an extended abstract of two pages (including
-references and figures) to the Orvium web site by the stated date in the call
-for abstracts. For LaTeX documents, upload a single ZIP file that includes the
-minimum set of source files needed to build a PDF. The ZIP file should be named
-using the following pattern \verb|Surname1Surname2Surname3_abstract.zip|. The
-primary LaTeX file should be named \verb|abstract.tex|. Avoid using LaTeX
-packages other than those listed in the \verb|bmd2023a.cls| file for
-compatibility with Orvium.
+The abstract must fit on this title page and should not include figures,
+tables, or citations. The abstract has the section heading \textbf{Abstract:},
+bold 11~pt Times New Roman, and the abstract text should be written in Times
+New Roman, 10~pt. The primary paper contents should start on the second page.
 
-The abstract must be written in English. It must contain the names,
-affiliations, and e-mail addresses of the authors. Do not edit the headers or
-footers or the list of publisher variables. The paper size is European A4 (21
-x 29.7 cm). The left and right margins are 1.27~cm, the top margin (not
-including the header) is 2.5~cm, and the bottom margin is 1.9~cm. The title
-should be in Times New Roman 18pt, and may extend over more than one line. The
-author's name or authors' names should be in Times New Roman 10pt and the
-affiliation should be in 8pt.
+% New page after the abstract.
+\newpage
+\pagestyle{headings}
 
-The abstract itself has the section heading \textbf{Abstract:}, bold 11~pt
-Times New Roman, and the primary text should be written in Times New Roman,
-10~pt. All these fonts are already set and should not be edited.
+\section*{Introduction}
+Authors are requested to upload a paper of 6 to 12 pages (including references
+and figures) to the Orvium web site by the stated date in the call for papers.
+For LaTeX documents, upload a single ZIP file that includes the minimum set of
+source files needed to build a PDF. The ZIP file should be named using the
+following pattern \verb|Surname1Surname2Surname3_paper.zip|. The primary LaTeX
+file should be named \verb|paper.tex| and should reside in the root of the ZIP
+file directory tree or under the only top level directory, e.g.
+\verb|paper/paper.tex|. Orvium compatible LaTeX packages are listed in the
+\verb|bmd2023p.cls| file; use of other packages may not function with Orvium.
+
+The paper must be written in English. It must contain the names, affiliations,
+and e-mail addresses of the authors. Do not edit the list of publisher
+variables. The paper size is European A4 (21 x 29.7~cm). The left and right
+margins are 1.27~cm, the top margin (not including the header) is 2.5~cm, and
+the bottom margin is 1.9~cm. The title should be in Times New Roman 18~pt, and
+may extend over more than one line. The author's name or authors' names should
+be in Times New Roman 10~pt and the affiliation should be in 8~pt. Section
+headings are in Times New Roman 11~pt and the primary text is in Times New
+Roman 10~pt. All of these fonts are already set and should not be edited. Only
+use \verb|\section| and \verb|\subsection| for sectioning the paper's contents.
+
+\section*{Equations, Figures, and Tables}
 
 Equations should be numbered continuously according to the format shown in
 Equation~(\ref{eq:equ1}):
@@ -76,7 +85,22 @@ Equation~(\ref{eq:equ1}):
 \end{equation}
 where the unknown symbols are explained after the equation.
 
-\begin{table}[]
+Figures, graphs, and tables must be included using the same style as in
+Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
+be centered on the page. Use of at least 300~dpi resolution for images and line
+art is required, 1~px wide lines in figures should be avoided as they may
+become invisible in print.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=55mm]{figure1}
+    \caption{An example of a figure caption. Use 10~pt Times New Roman. Use the
+      same style for the tables.}
+    \label{fig:fig1}
+  \end{center}
+\end{figure}
+
+\begin{table}[ht]
   \begin{center}
     \caption{Example of a table with a short caption.} \label{tab:tab1}
     \begin{tabular}{|c|ccc|}
@@ -91,20 +115,7 @@ where the unknown symbols are explained after the equation.
   \end{center}
 \end{table}
 
-Figures, graphs, and tables must be included using the same style as in
-Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}. Both figures and tables should
-be centered on the page. Use of at least 300 dpi resolution for pictures and
-600 dpi for line art is required, 1 px wide lines in figures should be avoided
-as they may become invisible in print.
-
-\begin{figure}[]
-  \begin{center}
-    \includegraphics[width=55mm]{figure1}
-    \caption{An example of a figure caption. Use 10~pt Times New Roman. Use the
-      same style for the tables.}
-    \label{fig:fig1}
-  \end{center}
-\end{figure}
+\section*{Bibliography}
 
 Bibliographical citations should be written in alphabetical order in the
 \textbf{References} section at the end of the document and use the APA citation
@@ -114,6 +125,8 @@ in a conference proceedings, and \citep{Sha71} is an article in a journal. Make
 use of the \verb|natbib| package with \verb|\citep{}| or \verb|\citet{}| for
 citations. If using a \verb|.bib| file, use the \verb|apalike| bibliography
 style to get APA formatting.
+
+\section*{Conclusion}
 
 We very much look forward to welcoming you in Delft! Best wishes and the
 warmest regards from the Organizing Committee of Bicycle and Motorcycle
