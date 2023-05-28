@@ -238,7 +238,7 @@
   %% headers
   \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
-      Evolving Scholar (\printyear)
+      The Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize \raggedleft http://dx.doi.org/\printdoi
