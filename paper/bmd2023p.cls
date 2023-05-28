@@ -123,7 +123,7 @@
 		\renewcommand{\do}[1]{\listsep~##1}%
 		\dolistloop\authorlist}}
 \newcommand{\addauthor}[2]{
-	\listadd{\authorlist}{#1~\textsuperscript{#2}}}
+	\listadd{\authorlist}{#1\textsuperscript{#2}}}
 
 %% Affiliationlist
 %% Print affiliations as a vertical list after calling
@@ -188,8 +188,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
-\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\normalsize\bf}}
-\renewcommand\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\small\bf}}
+\renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\fontsize{11}{13}\bf}}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\fontsize{11}{13}\bf}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -238,7 +238,7 @@
   %% headers
   \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
-      Evolving Scholar (\printyear)
+      The Evolving Scholar (\printyear)
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize \raggedleft http://dx.doi.org/\printdoi
