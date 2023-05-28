@@ -235,15 +235,6 @@
     on behalf of the authors.\\%
     ISSN: \printissn
   }}}
-  \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
-    \scriptsize%
-    \raggedright
-    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
-    on behalf of the authors.\\%
-    ISSN: \printissn
-    \\
-    \small \raggedleft \thepage\ of \pageref{LastPage}
-  }}}
 }
 % style for remaining pages after the first
 \renewcommand{\ps@headings}{
@@ -271,21 +262,27 @@
   %% footers
   \renewcommand{\@evenfoot}{{\parbox[b]{\textwidth}{
     \vspace{10mm}
-    \scriptsize \raggedright
-    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
-    on behalf of the authors.\\%
-    ISSN: \printissn
-    \\
-    \small \raggedleft \thepage\ of \pageref{LastPage}
+    \begin{minipage}{0.75\textwidth}
+      \scriptsize \raggedright
+      \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+      on behalf of the authors.\\%
+      ISSN: \printissn
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \scriptsize \raggedleft \thepage\ of \pageref{LastPage}
+    \end{minipage}
   }}}
   \renewcommand{\@oddfoot}{{\parbox[b]{\textwidth}{
     \vspace{10mm}
-    \scriptsize \raggedright
-    \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
-    on behalf of the authors.\\%
-    ISSN: \printissn
-    \\
-    \small \raggedleft \thepage\ of \pageref{LastPage}
+    \begin{minipage}{0.75\textwidth}
+      \scriptsize \raggedright
+      \copyright \printyear \hspace{1mm} \printauthors \hspace{1mm} published by TU Delft OPEN
+      on behalf of the authors.\\%
+      ISSN: \printissn
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \scriptsize \raggedleft \thepage\ of \pageref{LastPage}
+    \end{minipage}
   }}}
 }
 
