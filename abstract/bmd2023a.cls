@@ -18,16 +18,16 @@
 
 \LoadClass[10pt,a4paper,twoside]{article}
 
-%\RequirePackage[latin1]{inputenc}   % for unix users
-\RequirePackage[ansinew]{inputenc}  %  for windows users
+\RequirePackage[latin1]{inputenc}   % for unix users
+%\RequirePackage[ansinew]{inputenc}  %  for windows users
 %\RequirePackage[aplemac]{inputenc}  % for mac users
 
-\RequirePackage{a4}
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm,amsbsy,amsmath}
 \RequirePackage{bm}
 \RequirePackage{engord}
 \RequirePackage{epsfig,vmargin,booktabs}
 \RequirePackage[T1]{fontenc}
+\RequirePackage[a4paper]{geometry}  % required to get exact A4 size
 \RequirePackage{graphicx}
 \RequirePackage{latexsym}
 \RequirePackage{natbib}
@@ -37,7 +37,6 @@
 \RequirePackage{times}
 \RequirePackage{verbatim}
 
-\setpapersize{A4}  % needs vmargin package
 %\setmarginsrb{left}{top}{right}{bottom}{headh1gt}{headsep}{foothgt}{footskip}
 \setmarginsrb{12.7mm}{25mm}{12.7mm}{19mm}{18mm}{4mm}{6mm}{10mm}
 % headsep:  Distance from bottom of header to the body of text on a page.
