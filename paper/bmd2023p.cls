@@ -123,7 +123,7 @@
 		\renewcommand{\do}[1]{\listsep~##1}%
 		\dolistloop\authorlist}}
 \newcommand{\addauthor}[2]{
-	\listadd{\authorlist}{#1~\textsuperscript{#2}}}
+	\listadd{\authorlist}{#1\textsuperscript{#2}}}
 
 %% Affiliationlist
 %% Print affiliations as a vertical list after calling
