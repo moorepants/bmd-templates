@@ -6,6 +6,7 @@ abstractpdf: makeoutputdir
 	cp abstract/abstract.pdf output/abstract-latex.pdf
 paperpdf: makeoutputdir
 	pdflatex --output-directory='paper' paper.tex
+	pdflatex --output-directory='paper' paper.tex
 	cp paper/paper.pdf output/paper-latex.pdf
 docx: makeoutputdir bmd2023a.odt
 	soffice --headless --convert-to docx bmd2023a.odt
