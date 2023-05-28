@@ -18,10 +18,6 @@
 
 \LoadClass[10pt,a4paper,twoside]{article}
 
-\RequirePackage[latin1]{inputenc}   % for unix users
-%\RequirePackage[ansinew]{inputenc}  %  for windows users
-%\RequirePackage[aplemac]{inputenc}  % for mac users
-
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm,amsbsy,amsmath}
 \RequirePackage{bm}
 \RequirePackage{engord}
