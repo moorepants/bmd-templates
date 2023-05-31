@@ -146,7 +146,7 @@
   \begin{flushleft}
     {\fontsize{9pt}{11pt}\selectfont%
       % Do not edit.
-      Type of the Paper: Paper
+      Type of the Paper: Conference Paper
     }
   \end{flushleft}
 
@@ -203,7 +203,7 @@
     % NOTE : if there are blank lines in the code here, it can cause line
     % breaks in the rendered document. I don't understand why that would occur.
     \begin{minipage}{0.5\textwidth}
-      The Evolving Scholar (\printyear)
+      The Evolving Scholar Vol. 3, \printyear
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize \raggedleft http://dx.doi.org/\printdoi
@@ -238,7 +238,7 @@
   %% headers
   \renewcommand{\@evenhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
-      The Evolving Scholar (\printyear)
+      The Evolving Scholar Vol. 3, \printyear
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize \raggedleft http://dx.doi.org/\printdoi
@@ -247,7 +247,7 @@
   }}}
   \renewcommand{\@oddhead}{{\parbox[b]{\textwidth}{
     \begin{minipage}{0.5\textwidth}
-      The Evolving Scholar (\printyear)
+      The Evolving Scholar Vol. 3, \printyear
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
       \scriptsize \raggedleft http://dx.doi.org/\printdoi
