@@ -186,6 +186,11 @@
   \end{flushleft}
 }
 
+%% Keywords 
+\newcommand{\addKeywords}[1]{
+\section*{Keywords:}
+#1}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTIONS
 \renewcommand\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus-.2ex}{0.2ex}{\fontsize{11}{13}\bf}}
